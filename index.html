@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=driver-width">
+        <meta name="description" content="javascript">
+        <meta name="auther" content="mahdy">
+        <meta name="keywords" content="javascript">
+    </head>
+    <style>
+        .nav{
+            border: none;
+            padding: 10px;
+            outline: none;
+            box-shadow: 2px 2px 10px 2px rgb(187 177 204 / 25%);
+            border-radius: 5px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            transition: 0.90s cubic-bezier(1, -0.81, 0, 1.18) 0.90s;
+            background-image:linear-gradient(to left bottom,#ff000036 -12%, #3939cb4d 60% ,#00510e2e 110%);
+
+            
+            
+
+        }
+        .nav:hover{
+            transform:scale(0.98);
+            transition:0.90s cubic-bezier(1, 1.93, 0, 2.75) 0.90s;
+            background-color: rgba(0, 0, 0, 0.274);
+            background-color: rgba(42, 48, 87, 0.24);
+            background-attachment: fixed;
+            background-blend-mode: screen;
+            opacity: 0.90;
+            background-image:linear-gradient(to left bottom,#ff000036 -12%, #3939cb4d 60% ,#00510e2e 110%);
+            
+         }
+         .nav a{
+            font-size: 1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            color:black;
+            text-decoration: none;
+            text-shadow: 2px 2px 10px rgb(0 0 0 / 67%);
+         }
+         .conatiner{
+            border: none;
+            outline: none;
+            border-radius: 1px solid red;
+            box-shadow: 2px 2px 10px 2px rgb(187 177 204 / 25%);
+            width: 90%;
+            margin:5px auto;
+            padding: 10px;
+         }
+         /* #more{
+            display: block;
+         } */
+         #more {display: none;}
+
+    </style>
+    <body>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+            <a href="#">News</a>
+            <a href="#">Tell</a>        
+        </div>
+        <div class="conatiner">
+            <h2>this the best page for shop</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <button class="btn_read_more" >read more</button>
+        </div>
+        <div id="info_frinds"></div>
+        <script>
+            // let apple=21;
+            // let eat_apple=3;
+            // let total=apple-eat_apple;
+            // console.log(total);
+            // let now_year=2023;
+            // let mahdy=26;
+            // let ali=21;
+            // const mahdy_age=mahdy-now_year;
+            // const ali_age=ali-now_year;
+            // console.log(mahdy_age);
+            // console.log(ali_age);
+            // if(mahdy_age > ali_age){
+            //     alert('is currect');
+            // }else{
+            //     alert('is not currect');
+            // }
+                let btn=document.querySelector('.btn_read_more');
+         
+                
+                btn.addEventListener('click',function(){
+                let dots=document.getElementById('dots');
+                let less=document.getElementById('more');
+                if(dots.style.display ==='none'){
+                    btn.innerHTML ='read more';
+                    dots.style.display='inline';
+                    less.style.display='none';
+                }else{
+                    dots.style.display='none';
+                    less.style.display='inline';
+                }
+                //    console.log(more);
+              
+                    // let myAttr=more.id ;
+                    
+                    // console.log(myAttr );
+            
+                    
+                
+                  
+                })
+                // function moreRead(){
+                //     var btn=document.querySelector('.btn_read_more');
+                //     var dots = document.getElementById("dots");
+                //     var moreText = document.getElementById("more");
+                //     if(dots.style.display==='none'){
+                //         dots.style.display = "inline";
+                //         moreText.style.display = "none";
+                //     }else{
+                //         dots.style.display = "none";
+                //         btn.innerHTML = "Read less"; 
+                //         moreText.style.display = "inline";
+                //     }
+
+                // }
+
+                // const firstName='nima';
+                // const birthday='1999';
+                // const result=`i'm ${firstName} web Developer and i was born on ${birthday}`;
+                // console.log(result);
+                // let empoyes='empoyes';
+                // let hour=13;
+                // if(hour < 7 ||hour > 14){
+                //     console.log(empoyes+'is home');
+                // }else{
+                //     console.log(empoyes+'is working'); 
+                // }
+
+                // let name='ali';
+                // let age=21
+                //  console.log(`this my frinds name's ${name} and his year old is ${age}`);
+                // let name2='amir';
+                // let age2=19;
+                // console.log(`this my frinds name's ${name2} and his year old is ${age2}`);
+                // let name3='mousen';
+                // let age3=33;
+                // console.log(`this my frinds name's ${name3} and his year old is ${age3}`);
+          
+
+                function showMyName(name,age){
+                    let myfrindsInfo=`this my frinds name's ${name} and his year old is ${age}`;
+                    return myfrindsInfo;
+                }
+                // showMyName('aile',23);
+                // showMyName('maryem',18);
+                // showMyName('nima',44);
+                // showMyName('hassan',16);
+                // showMyName('daynal',12);
+                // showMyName('fathi',72);
+                //***********************************//
+                 // console.log(showMyName('aile',23));
+                // console.log(showMyName('maryem',18));
+                // console.log(showMyName('nima',44));
+                // console.log(showMyName('hassan',16));
+                // console.log(showMyName('daynal',12));
+                // console.log(showMyName('fathi',72));
+                let frindInfo=showMyName('aile',23);
+                let peopleName=document.querySelector('#info_frinds');
+                peopleName.innerHTML =frindInfo;
+                //***********************************//
+              
+                //peopleName.innerHTML =showMyName('aile',23);;
+                //*----------------------------------------*//
+                //console.log(frindInfo);
+                let frindInfo2 =showMyName('maryem',18);
+                 //console.log(frindInfo2);
+                 peopleName.innerHTML += '<br>' + showMyName('maryem',18);
+
+
+
+                
+                // let frindInfo3 =showMyName('nima',44);
+                //  console.log(frindInfo3);
+                // let frindInfo4 =showMyName('hassan',16);
+                //  console.log(frindInfo4);
+                // let frindInfo5 =showMyName('daynal',12);
+                //  console.log(frindInfo5);
+                // let frindInfo6 =showMyName('fathi',72);
+                //  console.log(frindInfo6);
+            
+                function convertTocelsius(fahrenheit){
+                    return (fahrenheit - 32) * (5/9);
+                }
+                console.log(convertTocelsius(55));
+
+                let sum=function(a,b){
+                    return a+b;
+                }
+                console.log(sum(12,19));
+
+
+                let add_sum=(birthday)=>{
+                    return birthday - 1999;
+                }
+                console.log(add_sum(2023));
+
+                let ali_age=birthday=> birthday-2023;
+                console.log(ali_age(1999));
+
+                ////******************** and sallary******//
+                function myDetails(myAge,mysalary){
+                    let myNewAge= myAge + 3;
+                    const mynewSalary=mysalary + 200;
+                    const myfeuther=`my age is :${myNewAge} and my salary is ${mynewSalary}`
+
+                    return myfeuther;
+                }
+                console.log(myDetails(25, 100));
+
+
+
+                //******************** function in function() *********/
+
+                function fucher_age(newAgePeople){
+                    const newAgePerson=newAgePeople + 5;
+                    return newAgePerson;
+                    //const sallary=mysallary + 300;
+                }   
+                function fuctherSallary(newsallaryPeople){
+                    const newSallaryPerson= newsallaryPeople  + 500;
+                    return newSallaryPerson
+                }
+
+                function mySallaryDate(myAge,mysallary){
+                    const myNewAge = fucher_age(myAge);
+                    const mynewSalary=fuctherSallary(mysallary);
+
+                    const sallary=`my age is : ${myNewAge} and salary is : ${mysallary}`;
+                    return sallary;
+                }
+
+                console.log(mySallaryDate(24, 400));
+
+
+
+                // let frinds1='ali';
+                // let frinds2='amir';
+                // let frinds3='nima';
+                // let frinds4='ailreza';
+                // let frinds5='masha';
+                // let frinds6='barozi';
+                // let frinds7='amirAli';
+                // let frinds8='mobina';
+                // let frinds9='mobin';
+                // console.log(frinds1);
+                
+                let frinds=['ali','amir','nima','ailreza','masha','barozi','amirAli','mobina','mobin'];
+                frinds.push('anni');
+                let people=['krimi','amirHassan',frinds];
+                people[1]='martin';
+                console.log(people);
+
+
+
+
+        </script>
+
+    </body>
+</html>
